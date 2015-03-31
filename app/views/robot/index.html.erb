@@ -1,0 +1,14 @@
+<%= form_tag("/robot/index", method: 'get') do %>
+	Please input file name<br/>
+	<%= text_field "command", "file_name" %>
+	<%= submit_tag 'Submit' %>
+<% end %>
+<br/>
+<% unless @robot.nil? %>
+	<% if @place.nil? %>
+	output:
+	<% else %>
+		output:<br/>
+	<%=@place%>
+	<% end %>
+<% end %>
